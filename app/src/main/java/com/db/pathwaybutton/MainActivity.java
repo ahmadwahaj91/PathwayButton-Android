@@ -15,14 +15,17 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
         pathwayButton = findViewById(R.id.pathway);
         pathwayButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(getBaseContext(), "You just pressed the Pathway Button", Toast.LENGTH_LONG).show();
+                methodClick();
             }
         });
+    }
 
+    public void methodClick() {
+        Toast.makeText(getApplication(), "This is my Toast message!",
+                Toast.LENGTH_LONG).show();
     }
 }
